@@ -65,6 +65,8 @@ class TaskController extends Controller
             return response()->json(['error' => 'Task not found'], 404);
         }
         
-        return response()->json(null, 204);
+        return response()->json([
+            'message' => 'Se eliminó correctamente'
+        ], 200);
     }
 }
